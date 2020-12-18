@@ -1,0 +1,11 @@
+.root{
+    background-color: blueviolet;
+}
+
+#a{
+    display: none;
+}
+
+#b{
+    display: inline;
+}
