@@ -3,20 +3,25 @@ let pathB = document.querySelector("#b");
 let nicolaus = document.querySelector("#santa");
 
 function AInlineFunction() {
-    setTimeout(function () { pathA.style.display = "inline", pathB.style.display = "none" }, 300);
-   
+    pathA.style.display = "inline", pathB.style.display = "none";
 }
+
 
 function BInlineFunction() {
-    setTimeout(function () { pathA.style.display = "none", pathB.style.display = "inline" }, 200);
-
+    pathA.style.display = "none", pathB.style.display = "inline";
 }
 
-AInlineFunction();
-BInlineFunction();
-AInlineFunction();
-BInlineFunction();
-AInlineFunction();
-BInlineFunction();
-AInlineFunction();
-BInlineFunction();
+
+for (let index = 0; index < 2; index++) {
+    setInterval(() => {
+        BInlineFunction();
+        console.log(index);
+    }, 1000);
+    setInterval(() => {
+        AInlineFunction();
+        console.log(index);
+    }, 2000);
+
+    ;
+
+}
