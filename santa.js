@@ -12,16 +12,9 @@ function BInlineFunction() {
 }
 
 
-for (let index = 0; index < 2; index++) {
-    setInterval(() => {
-        BInlineFunction();
-        console.log(index);
-    }, 1000);
-    setInterval(() => {
-        AInlineFunction();
-        console.log(index);
-    }, 2000);
 
-    ;
+setInterval(BInlineFunction, 1000); 
+console.log(b);
+setInterval(AInlineFunction, 2000);
+console.log(a);
 
-}
